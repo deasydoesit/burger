@@ -1,0 +1,38 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+  
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.navbar {
+  display: block !important;
+  font-size: 2.5rem;
+}
+
+.burger-header, .form-container, .center {
+  text-align: center;
+}
+
+.devour {
+  padding: 0 !important;
+  font-size: 13px !important;
+}

@@ -1,0 +1,43 @@
+<nav class="navbar bg-danger text-white font-weight-bold text-center">
+  Burgers!
+</nav>
+<br>
+<div class="center">
+  <img class="gif" src="https://media1.giphy.com/media/zNsrnGVpCJMOc/200_s.gif?cid=e1bb72ff5b3446f461584f616f082c3e" data-still="https://media1.giphy.com/media/zNsrnGVpCJMOc/200_s.gif?cid=e1bb72ff5b3446f461584f616f082c3e" data-animate="https://media1.giphy.com/media/zNsrnGVpCJMOc/200.gif?cid=e1bb72ff5b3446f461584f616f082c3e" data-state="still">
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2 class="burger-header">Burgers that have been devoured!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devoured=true}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm">
+      <h2 class="burger-header">Burgers that need to be devoured!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devoured=false}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="form-container">
+  <h2>Add a Burger</h2>
+  <form class="create-form">
+    <div class="form-group">
+      <label for="burger">Burger Name:</label>
+      <input type="text" id="burger" name="name">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Burger</button>
+  </form>
+</div>
